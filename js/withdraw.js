@@ -7,6 +7,13 @@ document.getElementById('button-withdraw').addEventListener('click', function(){
     const balanceString = balance.innerText;
     const balanceStringToNumber = parseFloat(balanceString); 
 
+   
+
+    if( balanceStringToNumber < withdrawInputValuToNumber ){
+        alert("You don't have enough money in your account");
+        return;
+    }
+
     const balanceDecrease = balanceStringToNumber- withdrawInputValuToNumber;
     balance.innerText = balanceDecrease;
 
